@@ -4,213 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Montasin Hossain Mahi | ML Engineer</title>
-    <style>
-        /* CSS STYLES */
-        :root {
-            --bg-color: #0a192f;
-            --text-main: #ccd6f6;
-            --text-secondary: #8892b0;
-            --accent: #64ffda;
-            --card-bg: #112240;
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Particle Background */
-        #canvas-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-            opacity: 0.6;
-        }
-
-        /* Typography & Layout */
-        h1,
-        h2,
-        h3 {
-            color: var(--text-main);
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-main);
-            border-bottom: 2px solid var(--accent);
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        p {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        a:hover {
-            text-shadow: 0 0 8px var(--accent);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        section {
-            padding: 80px 0;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: 0.8s all ease-in-out;
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Hero Section */
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .greeting {
-            color: var(--accent);
-            font-family: monospace;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .name {
-            font-size: 4.5rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .typing-container {
-            font-size: 2.5rem;
-            color: var(--text-secondary);
-            font-weight: 600;
-            margin-bottom: 20px;
-            height: 50px;
-        }
-
-        .typing-text::after {
-            content: '|';
-            animation: blink 1s infinite;
-            color: var(--accent);
-        }
-
-        @keyframes blink {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0;
-            }
-        }
-
-        /* Grid Layouts */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        /* Cards */
-        .card {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 8px;
-            transition: 0.3s;
-            border: 1px solid transparent;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-            box-shadow: 0 10px 30px -15px rgba(100, 255, 218, 0.2);
-        }
-
-        .card h3 {
-            color: var(--text-main);
-            margin-bottom: 10px;
-            font-size: 1.4rem;
-        }
-
-        .card .date {
-            color: var(--accent);
-            font-family: monospace;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        /* Tech Stack Tags */
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .tag {
-            background: rgba(100, 255, 218, 0.1);
-            color: var(--accent);
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-family: monospace;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            border: 1px solid var(--accent);
-            border-radius: 4px;
-            color: var(--accent);
-            font-family: monospace;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: rgba(100, 255, 218, 0.1);
-        }
-    </style>
 </head>
 
 <body>
@@ -218,258 +16,189 @@
     <canvas id="canvas-container"></canvas>
 
     <div class="container">
+
         <header>
+            <img src="./asset/picture.png" alt="Mahi" class="profile-picture">
+            <br>
+
             <p class="greeting">Hi, my name is</p>
+
             <h1 class="name">Montasin Hossain Mahi.</h1>
+
             <div class="typing-container">
                 <span class="typing-text"></span>
             </div>
-            <p style="max-width: 600px; font-size: 1.1rem;">
-                I build technologies that bridge biological intelligence and machine systems. Focused on scalable AI
-                architectures, long-term neurotechnology research, and robotics.
+
+            <p style="max-width:600px;font-size:1.1rem;">
+                I build technologies that bridge biological intelligence and machine systems.
+                Focused on scalable AI architectures, long-term neurotechnology research, and robotics.
             </p>
+
             <div>
                 <a href="mailto:montasin8110@gmail.com" class="btn">Get In Touch</a>
             </div>
+            
+
         </header>
 
+
         <section id="experience" class="scroll-anim">
+
             <h2>Professional Experience</h2>
+
             <div class="grid-2">
+
                 <div class="card">
                     <h3>AI Research Intern</h3>
                     <span class="date">OpenAI | 2029 - Present | San Francisco, CA</span>
                     <p>Working on multimodal learning and neural interfaces simulation models.</p>
                 </div>
+
                 <div class="card">
                     <h3>Machine Learning Intern</h3>
                     <span class="date">Amazon | 2028 - 2029 | Washington, US</span>
-                    <p>Optimized computer vision pipelines for robot navigation systems utilizing advanced AI and
-                        backend architectures.</p>
+
+                    <p>
+                        Optimized computer vision pipelines for robot navigation systems utilizing
+                        advanced AI and backend architectures.
+                    </p>
+
                     <div class="tags">
                         <span class="tag">PyTorch</span>
                         <span class="tag">TensorFlow</span>
                         <span class="tag">Node.js</span>
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
+
         <section id="projects" class="scroll-anim">
+
             <h2>Featured Engineering Projects</h2>
+
             <div class="grid-3">
+
                 <div class="card">
                     <h3>NeuroVision</h3>
                     <p>Deep learning model for neural signal classification and visualization.</p>
+
                     <div class="tags">
                         <span class="tag">PyTorch</span>
                         <span class="tag">Signal Processing</span>
                         <span class="tag">CUDA</span>
                     </div>
                 </div>
+
                 <div class="card">
                     <h3>RoboLearn</h3>
                     <p>Reinforcement learning framework for robotics manipulation.</p>
+
                     <div class="tags">
                         <span class="tag">Python</span>
                         <span class="tag">OpenAI Gym</span>
                         <span class="tag">ROS</span>
                     </div>
                 </div>
+
                 <div class="card">
                     <h3>FinBot AI</h3>
                     <p>Automated financial indicator time-series dimensional sentiment analysis.</p>
+
                     <div class="tags">
                         <span class="tag">Transformers</span>
                         <span class="tag">FastAPI</span>
                         <span class="tag">PostgreSQL</span>
                     </div>
                 </div>
+
                 <div class="card">
                     <h3>AI Seizure Detection</h3>
-                    <p>Deep learning system to detect seizure patterns from EEG signals using automated feature
-                        extraction.</p>
+
+                    <p>
+                        Deep learning system to detect seizure patterns from EEG signals
+                        using automated feature extraction.
+                    </p>
+
                     <div class="tags">
                         <span class="tag">MNE</span>
                         <span class="tag">PyTorch</span>
                         <span class="tag">SciPy</span>
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
+
         <section id="achievements" class="scroll-anim">
+
             <h2>Achievements & Impact</h2>
+
             <div class="card">
+
                 <div class="grid-2">
+
                     <div>
-                        <h3 style="color: var(--accent);">Competitive Programming</h3>
-                        <ul style="color: var(--text-secondary); list-style-position: inside; margin-bottom: 20px;">
+
+                        <h3 style="color:var(--accent);">Competitive Programming</h3>
+
+                        <ul style="color:var(--text-secondary);list-style-position:inside;margin-bottom:20px;">
+
                             <li>Master rank on Codeforces</li>
                             <li>200+ day coding streak (GitHub & LeetCode)</li>
                             <li>Solved 1500+ algorithmic problems</li>
                             <li>Expertise in graph theory and DP</li>
+
                         </ul>
+
                     </div>
+
                     <div>
-                        <h3 style="color: var(--accent);">Leadership & Community</h3>
-                        <ul style="color: var(--text-secondary); list-style-position: inside;">
+
+                        <h3 style="color:var(--accent);">Leadership & Community</h3>
+
+                        <ul style="color:var(--text-secondary);list-style-position:inside;">
+
                             <li>Founder & CEO of an AI Driven Startup</li>
                             <li>National Technology Award Recipient (AI & Robotics)</li>
                             <li>Founder of 100K+ subscriber tech channel on YouTube</li>
                             <li>Mentored 10,000+ students globally</li>
+
                         </ul>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
-        <section
-            style="text-align: center; padding-bottom: 40px; border-top: 1px solid var(--card-bg); margin-top: 50px;">
+
+        <section style="text-align:center;padding-bottom:40px;border-top:1px solid var(--card-bg);margin-top:50px;">
+
             <p>Designed for Montasin Hossain Mahi &copy; 2026</p>
-            <div class="tags" style="justify-content: center;">
+
+            <div class="tags" style="justify-content:center;">
                 <span class="tag">Python</span>
                 <span class="tag">C++</span>
                 <span class="tag">Rust</span>
                 <span class="tag">Go</span>
                 <span class="tag">Kubernetes</span>
             </div>
+
         </section>
+
     </div>
 
-    <script>
-        // 1. Typing Effect Logic
-        const textArray = ["ML Engineer.", "AI Researcher.", "Tech Entrepreneur.", "Neurotech Enthusiast."];
-        let textIndex = 0;
-        let charIndex = 0;
-        const typingElement = document.querySelector('.typing-text');
+    <script src="script.js"></script>
 
-        function type() {
-            if (charIndex < textArray[textIndex].length) {
-                typingElement.textContent += textArray[textIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(type, 100);
-            } else {
-                setTimeout(erase, 2000);
-            }
-        }
-
-        function erase() {
-            if (charIndex > 0) {
-                typingElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
-                charIndex--;
-                setTimeout(erase, 50);
-            } else {
-                textIndex = (textIndex + 1) % textArray.length;
-                setTimeout(type, 500);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", () => { setTimeout(type, 1000); });
-
-        // 2. Scroll Animation Logic (Intersection Observer)
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.scroll-anim').forEach((el) => observer.observe(el));
-
-        // 3. Interactive Neural Particle Background
-        const canvas = document.getElementById('canvas-container');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        let particlesArray = [];
-        let mouse = { x: null, y: null, radius: 150 };
-
-        window.addEventListener('mousemove', (event) => {
-            mouse.x = event.x;
-            mouse.y = event.y;
-        });
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1;
-                this.speedX = Math.random() * 1 - 0.5;
-                this.speedY = Math.random() * 1 - 0.5;
-            }
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-            }
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = '#64ffda';
-                ctx.fill();
-            }
-        }
-
-        function init() {
-            particlesArray = [];
-            for (let i = 0; i < 100; i++) {
-                particlesArray.push(new Particle());
-            }
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (let i = 0; i < particlesArray.length; i++) {
-                particlesArray[i].update();
-                particlesArray[i].draw();
-
-                // Draw connecting lines
-                for (let j = i; j < particlesArray.length; j++) {
-                    const dx = particlesArray[i].x - particlesArray[j].x;
-                    const dy = particlesArray[i].y - particlesArray[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < 100) {
-                        ctx.beginPath();
-                        ctx.strokeStyle = `rgba(100, 255, 218, ${1 - distance / 100})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
-                        ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
-                        ctx.stroke();
-                    }
-                }
-
-                // Mouse interaction
-                if (mouse.x != null) {
-                    const dx = particlesArray[i].x - mouse.x;
-                    const dy = particlesArray[i].y - mouse.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < mouse.radius) {
-                        ctx.beginPath();
-                        ctx.strokeStyle = `rgba(100, 255, 218, ${1 - distance / mouse.radius})`;
-                        ctx.lineWidth = 1;
-                        ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
-                        ctx.lineTo(mouse.x, mouse.y);
-                        ctx.stroke();
-                    }
-                }
-            }
-            requestAnimationFrame(animate);
-        }
-
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            init();
-        });
-
-        init();
-        animate();
-    </script>
 </body>
 
 </html>
